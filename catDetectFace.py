@@ -1,5 +1,4 @@
 import os.path
-import numpy
 import keyboard
 import cv2
 
@@ -22,8 +21,7 @@ while True:
     for x, y, w, h in polygon:
 
         cv2.putText(img_, 'Animal:Cat, X-position:{}, Y-position:{}'.format(x, y, w, h), (0, 100),
-                    cv2.FONT_HERSHEY_SCRIPT_COMPLEX, 1.5, (100, 200, 0), None, cv2.FONT_HERSHEY_SCRIPT_COMPLEX, 1.5,
-                    (100, 200, 0), None)
+                    cv2.FONT_HERSHEY_SIMPLEX, 1.5, (100, 200, 0), 4, 4)
 
         if not any(polygon[0]):
             continue
