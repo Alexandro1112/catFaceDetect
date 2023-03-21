@@ -18,11 +18,11 @@ import cv2
 import numpy
 
 count = 0
-img = cv2.imread('cat.png')
+img = cv2.VideoCapture(0)
 
 
 while True:
-    img_ = img
+    _, img_ = img.read()
     cv2.resize(img_, (1600, 1600))
     upperBody_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalcatface.xml')
     gray = cv2.cvtColor(img_, cv2.COLOR_BGR2GRAY)
